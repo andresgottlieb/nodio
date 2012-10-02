@@ -1,0 +1,26 @@
+{
+    "name": "nodio",
+    "version": "0.0.1",
+    "description": "A NodeJS client for accessing the Podio API using the App authentication flow.",
+    "main": "./lib/nodio",
+    "keywords": [
+        "podio",
+        "node",
+        "nodejs",
+        "api"
+    ],
+    "dependencies": {"restler": ""},
+    "directories" : { "lib" : "./lib" },
+    "tags": [
+        "podio",
+        "node",
+        "nodejs",
+        "api"
+    ],
+    "author": "Andrés Gottlieb <agottlieb@gmail.com>",
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/andresgottlieb/nodio.git"
+    },
+    "engines": { "node": ">= 0.4.x" }
+}
