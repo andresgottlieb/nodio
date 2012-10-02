@@ -1,7 +1,7 @@
 Nodio
 ======
 
-A NodeJS client for accessing the Podio API using the App authentication flow (https://developers.podio.com/authentication/app_auth).
+A node.js client for accessing the Podio API using the App authentication flow (https://developers.podio.com/authentication/app_auth).
 
 Usage
 -----
@@ -56,8 +56,8 @@ nodio.AddNewItem(credentials, item, callback);
 ```
 Callback receives two arguments: `(err, item_info)`
 
-ToDo
-----
+To do
+-----
 
 Lots of stuff, this is only one API operation, please help me! Fork me!
 
