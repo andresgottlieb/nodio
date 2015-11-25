@@ -7,30 +7,48 @@ Usage
 -----
 
 ``` js
-var nodio = require('nodio');
 
-//Your podio app and client credentials (obtained in the app's dev section and in https://developers.podio.com/api-key, respectively)
+// Your podio app and client credentials (obtained in the app's dev section and in https://developers.podio.com/api-key, respectively)
 var credentials = {
     app_id: 'YOUR_APP_ID',
     app_token: 'YOUR_APP_TOKEN',
     client_id: 'YOUR_CLIENT_ID',
     client_secret: 'YOUR_CLIENT_TOKEN'
-}
+};
 
-//The item you want to push to Podio (fields defined in the respective app)
+var nodio = require('nodio')(credentials);
+
+// The item you want to push to Podio (fields defined in the respective app)
 var item = {
     arbitrary_field_name: 'some text',
     magic_number: 142857,
     something_else: 'I love Celeste'
-}
+};
 
-nodio.addNewItem(credentials, item, function(err, item_info){
+nodio.addNewItem(item, function(err, item_info){
     if(err){
-        //Error
+        // Error
         console.log(err);
     }
     else{
-        //Item added successfully, here's the item's relevant information
+        // Item added successfully, here's the item's relevant information
+        var item_id = item_info.item_id;
+        var title = item_info.title;
+
+        console.log(item_id+" - "+title);
+    }
+});
+
+// Podio item id, obtained from an app item's dev section
+var item_id = APP_ITEM_ID;
+
+nodio.getItem(item_id, function (err, item_info) {
+    if(err){
+        // Error
+        console.log(err);
+    }
+    else{
+        // Item retrieved successfully
         var item_id = item_info.item_id;
         var title = item_info.title;
 
@@ -52,7 +70,13 @@ Methods
 -------
 
 ``` js
-nodio.AddNewItem(credentials, item, callback);
+nodio.AddNewItem(item, callback);
+```
+Callback receives two arguments: `(err, item_info)`
+
+
+``` js
+nodio.getItem(item_id, callback);
 ```
 Callback receives two arguments: `(err, item_info)`
 
