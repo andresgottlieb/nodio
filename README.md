@@ -70,13 +70,7 @@ Methods
 -------
 
 ``` js
-nodio.AddNewItem(item, callback);
-```
-Callback receives two arguments: `(err, item_info)`
-
-
-``` js
-nodio.getItem(item_id, callback);
+nodio.AddNewItem(credentials, item, callback);
 ```
 Callback receives two arguments: `(err, item_info)`
 
