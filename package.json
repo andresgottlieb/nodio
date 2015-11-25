@@ -9,7 +9,11 @@
         "nodejs",
         "api"
     ],
-    "dependencies": {"restler": ""},
+    "dependencies": {
+        "restler": "",
+        "moment": "",
+        "lodash": ""
+    },
     "directories" : { "lib" : "./lib" },
     "tags": [
         "podio",
