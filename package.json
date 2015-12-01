@@ -1,6 +1,6 @@
 {
   "name": "nodio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A NodeJS client for accessing the Podio API using the App authentication flow.",
   "main": "./lib/nodio",
   "keywords": [
